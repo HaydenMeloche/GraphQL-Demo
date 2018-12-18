@@ -5,7 +5,7 @@ Really simple client/server app that utilizes GraphQL
 Rather than having endpoints for different data. You have one endpoint and pass it queries.
 
 Define you schema
-```
+```js
 // GraphQL schema
 var schema = buildSchema(`
     type Query {
@@ -22,11 +22,13 @@ var schema = buildSchema(`
     }
 `);
 ```
-
-Load it with same fake data....
+Create an array of some fake data
+```js
+var coursesData = require('./coursesData.json');
+```
 
 Then write some filtering functions
-```
+```js
 var getCourse = function(args) { 
     var id = args.id;
     return coursesData.filter(course => {
@@ -44,7 +46,7 @@ var getCourses = function(args) {
 ```
 
 Write one endpoint that utilizes GraphQL and your filtering functions & voila
-```
+```js
 var root = {
     course: getCourse,
     courses: getCourses
