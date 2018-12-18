@@ -4,6 +4,10 @@ Really simple client/server app that utilizes GraphQL
 ## How does it work?
 Rather than having endpoints for different data. You have one endpoint and pass it queries.
 
+You can specify the data your interested in recieving and you will only get that data back. No need to have middle-layer API that strips down crud apps.
+
+## How-to
+
 Define you schema
 ```js
 // GraphQL schema
