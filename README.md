@@ -1,5 +1,5 @@
 # GraphQL-Demo
-Really simple client/server app that utilizes GraphQL
+Really simple server app that utilizes GraphQL
 
 ## How does it work?
 Rather than having endpoints for different data. You have one endpoint and pass it queries.
